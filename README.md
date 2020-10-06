@@ -18,8 +18,9 @@ First, you need to install the vultr client created by JamesClonk in https://git
 second, go to your vultr control panel and get your API key.
 
 export VULTR_API_KEY="####################################################"
-
 you can add this line to .bashrc yo make it permanently.
+
+last, if you want, you can move vultr_manager to your /bin folder for more simplicity.
 ```
 
 
@@ -36,7 +37,8 @@ this will list your current vps.
 ```
 [root@DarkStar] #vultr_manager create your_vps_name
 
-this will create a new vps (Amsterdam 5usd/mth) and run the bash script "install_software.sh" on the new host.
+this will create a new vps (Debian 10 / Amsterdam / 5usd/mth) and run the bash script "install_software.sh" on the new host.
+Feel free to edit the source code to change this options.
 ```
 
 ```
