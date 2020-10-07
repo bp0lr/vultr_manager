@@ -121,6 +121,7 @@ then
     echo "[+] Machine was created: $machineID / $machineIP"
     
     echo "[+] Installing stuff..."
+    scp keys.txt -o StrictHostKeyChecking=no root@$machineIP:/root/
     ssh -o StrictHostKeyChecking=no root@$machineIP 'bash -s' < $PWD/install_software.sh > /dev/null 2>&1
     add "${serverName}" "$machineIP"
     
