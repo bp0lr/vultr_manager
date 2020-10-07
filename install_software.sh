@@ -5,10 +5,13 @@ apt install -y wget git python3 python3-pip
 # ref: https://github.com/canha/golang-tools-install-script
 wget -q -O - https://git.io/vQhTU | bash
 source /root/.bashrc
-rm -rf /root/go
 
 echo "alias ls='ls --color=auto'" >> ~/.bashrc 
-source /root/keys.txt
+cat /root/keys.txt >> ~/.bashrc
+source ~/.bashrc
+
+rm -rf /root/go/
+rm -rf /root/keys.txt
 
 #my tools
 go get -u -v github.com/projectdiscovery/chaos-client/cmd/chaos
